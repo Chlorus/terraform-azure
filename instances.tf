@@ -19,9 +19,16 @@ resource "azurerm_virtual_machine" "srcds" {
   }
 
   os_profile {
-    computer_name = "srcds-dev-01}"
+    computer_name = "srcds-dev-01"
     admin_username = "${var.adminuser}"
     admin_password = "${var.adminpassword}"
+  }
+
+  os_profile_windows_config {
+    provision_vm_agent = true
+    enable_automatic_upgrades = true
+    timezone = "Mountain Standard Time"
+
   }
 
   tags {

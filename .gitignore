@@ -5,6 +5,9 @@
 *.tfstate
 *.tfstate.*
 
+#Execution plans
+*.plan
+
 *.secret
 # Crash log files
 crash.log
